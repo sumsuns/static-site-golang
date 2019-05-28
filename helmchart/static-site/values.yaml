@@ -1,0 +1,23 @@
+image:
+  repository: "yourdockerregistry/static_site"
+  tag: "latest"
+  pullPolicy: "IfNotPresent"
+  replica: 1 
+service:
+ name: static-site 
+ type: ClusterIP
+ httpPort: 30100
+ port: 3000
+ingress:
+  enabled: true 
+  annotations:
+  annotations: {
+      kubernetes.io/ingress.class: nginx
+    }
+  path: /
+  tls:
+  - secretName: jenkinscert
+    hosts:
+      - devops-jenkins.amazon.com
+additionalConfig: {}
+resources: {}

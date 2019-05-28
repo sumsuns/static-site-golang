@@ -1,0 +1,14 @@
+apiVersion: v1
+description: GO static site web Application
+name: static-site 
+version: 1.0.0
+appVersion: 19.05
+icon: https://upload.wikimedia.org/wikipedia/commons/2/23/Golang.png
+home: https://golang.org
+keywords:
+- go
+- http
+- web
+maintainers:
+- email: suma.ningaraju.ext@orangebank.com 
+  name: Rocket Team
